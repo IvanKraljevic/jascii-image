@@ -11,6 +11,6 @@ java -cp  target/ com.ikraljevic.jascii.Main /path/to/image.png /path/to/output.
 ```
 
 ## Changing the "pixel to character" map
-- there are 2 "pixel to character" maps provided: `short` and `long` (default)
+- there are 2 "pixel to character" maps provided: `short` (default) and `long`
 - the `long` has more characters than the `short` (obvious) so it provides a detailed ASCII export
 - to change the preferred mapping strategy simply edit the `resources/config.properties` file
