@@ -18,9 +18,9 @@ public class Main implements Runnable {
         new Main(args[0], args[1]).run();
     }
 
-    public Main(String path, String outputPath) {
-        Objects.nonNull(path);
-        Objects.nonNull(outputPath);
+    public Main(final String path, final String outputPath) {
+        Objects.requireNonNull(path);
+        Objects.requireNonNull(outputPath);
         this.path = path;
         this.outputPath = outputPath;
     }
@@ -32,9 +32,11 @@ public class Main implements Runnable {
             log.info("Image loaded from: " + path);
             Properties converterProperties = Utils.loadProperties("resources/config.properties");
             log.info("Properties file loaded");
+
             AsciiConverter converter = new AsciiConverter(converterProperties);
             String asciiImage = converter.convert(image);
             log.info("Image converted");
+
             Files.write(Paths.get(outputPath), asciiImage.getBytes());
             log.info("Converted image saved to: " + outputPath);
         } catch (Exception e) {

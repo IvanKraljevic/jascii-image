@@ -21,7 +21,7 @@ public class Utils {
         return ImageIO.read(Paths.get(path).toFile());
     }
 
-    public static int calculateCapacity(BufferedImage image) {
+    public static int calculateCapacity(final BufferedImage image) {
         return image.getHeight() + image.getHeight() * image.getWidth();
     }
 
