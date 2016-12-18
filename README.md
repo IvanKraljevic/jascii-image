@@ -3,7 +3,7 @@ Simply converts the input image to an ASCII text.
 
 ## Running
 Clone, compile, run:
-```
+```shell
 git clone git@github.com:IvanKraljevic/jascii-image.git
 cd jascii-image
 mkdir target && javac -cp src/ -d target/ src/com/ikraljevic/jascii/Main.java
